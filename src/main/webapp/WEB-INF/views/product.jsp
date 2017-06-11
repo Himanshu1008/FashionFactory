@@ -22,14 +22,15 @@
                         </center>
                        
             <h1><strong>Product Information</strong></h1>
-<h3>ProductName:${name}</h3>
+<h3>ProductName:</h3>
 <h3>price:${price}</h3>
 <h3>Description:${des}</h3>
 <h3>Category:${cat}</h3>
+<h3>Image</h3>
 <hr><hr>
 
 <table border="2" width="70%" cellpadding="2">  
-<tr><th>Id</th><th>Name</th><th>Price</th><th>Description</th><th>Category</th><th>Edit</th><th>Delete</th></tr>  
+<tr><th>Id</th><th>Name</th><th>Price</th><th>Description</th><th>Category</th><th>Image</th><th>Edit</th><th>Delete</th></tr>  
    <c:forEach var="pro" items="${list}">   
    <tr>  
    <td>${pro.productId}</td>  
@@ -37,6 +38,7 @@
    <td>${pro.productPrice}</td>  
    <td>${pro.productDescription}</td>
    <td>${pro.productCategory}</td>
+   <td><img src="${pageContext.request.contextPath}/${pro.image}">${pageContext.request.contextPath}/${pro.image}</td>
    <td><a href="updateProduct/${pro.productId}">update</a></td>  
    <td><a href="deleteProductFromDB/${pro.productId}">Delete</a></td>  
    </tr>  

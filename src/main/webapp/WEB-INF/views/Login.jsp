@@ -19,7 +19,7 @@
 <img src="Resources\images\login.jpg" width="100%" height="450" />
 </div>
 <div class="col-lg-6">
-<form action="CartFlow/Cart1" method="post">
+<form action="login" method="post">
 <center>
     <div>
       <label for="email" style= "color:blue; font-size:180%;">UserName:</label>

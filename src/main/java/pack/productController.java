@@ -174,7 +174,7 @@ public class productController {
 
 			}
 
-			i1.setImage("resources/images/image_" + i1.getProductId() + ".jpg");
+			i1.setImage("Resources/images/image_" + i1.getProductId() + ".jpg");
 
 			pdao.update(i1);
 		} catch (Exception e) {
@@ -307,8 +307,17 @@ public class productController {
 	{
 		ModelAndView mv=new ModelAndView("Cart1");
 		System.out.println("cart");
+		mv.addObject("list", pdao.getAllProducts());
 		return mv;
 		
+	}
+	@RequestMapping("/view/{id}")
+	protected ModelAndView View(@PathVariable("id")int id)
+	{
+		ModelAndView mv=new ModelAndView("view");
+		System.out.println("view");
+		mv.addObject("item", pdao.getProduct(id));
+		return mv;
 	}
 
 }

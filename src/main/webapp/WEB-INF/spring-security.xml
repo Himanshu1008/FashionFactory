@@ -23,9 +23,9 @@
 			access="permitAll or hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')" />
 		<security:csrf disabled="true" />
 	
-	<security:form-login login-page="/loginpage"
+	<security:form-login login-page="/Login"
 			username-parameter="username" password-parameter="password"
-			default-target-url="/Home" authentication-failure-url="/loginpage?error=1" />
+			default-target-url="/Cart1" authentication-failure-url="/Login?error=1" />
 <!--          <security:logout logout-url="/logout" -->
 <!-- 			logout-success-url="/Home" /> -->
 	
